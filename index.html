@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Guia Apto 93</title>
+<meta name="description" content="Guia de boas-vindas · Welcome guide — Apartamento Sol Nascente, Praia Grande">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f4f6f9">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Apto 93">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+:root{--sea:#1a7fd0;--deep:#14345a;--sand:#e6effb;--bg:#e4effc;--ink:#1b2733;--mute:#5b6b7d;--card:#fff;--line:#d3e1f3;--warn:#fff1c4;--r:20px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
+html[data-lang=pt] .en,html[data-lang=en] .pt{display:none!important}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+.ic{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* language toggle */
+.lang{display:flex;background:rgba(255,255,255,.7);border-radius:99px;padding:3px}
+.lang button{border:0;background:none;color:#14345a;font:600 13px system-ui;padding:6px 12px;border-radius:99px;cursor:pointer}
+html[data-lang=pt] .bpt,html[data-lang=en] .ben{background:#14345a;color:#fff}
+.bar .lang{background:var(--sand)}
+.bar .lang button{color:var(--deep)}
+html[data-lang=pt] .bar .bpt,html[data-lang=en] .bar .ben{background:var(--sea);color:#fff}
+
+/* home header */
+.hero{position:relative;background:linear-gradient(180deg,#9ccbfa 0%,#c4e0fb 55%,#d9eafb 100%);color:#10294a;padding:calc(env(safe-area-inset-top) + 14px) 0 0;border-radius:0 0 30px 30px;overflow:hidden}
+.heroText{position:relative;z-index:2;pointer-events:none}
+.heroText .lang{pointer-events:auto}
+.top{display:flex;justify-content:flex-end}
+h1{margin:8px 0 6px;font-size:25px;line-height:1.16;color:#10294a}
+.hero p{margin:0;font-size:15px;line-height:1.4;color:#2b4668}
+.heroArt{position:relative;width:100%;max-width:560px;margin:-18px auto 0;aspect-ratio:360/216}
+@media(min-width:561px){.heroArt{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}}
+.slides{position:absolute;inset:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.slides::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:center;height:100%}
+.slide svg,.slide img{width:100%;height:100%;display:block;object-fit:cover}
+.dots{position:absolute;left:0;right:0;bottom:80px;display:flex;justify-content:center;gap:6px;z-index:3}
+.dots i{width:7px;height:7px;border-radius:99px;background:rgba(255,255,255,.6);transition:.2s}
+.dots i.on{background:#fff;width:18px}
+
+/* colours per section */
+.c1{--ic:#ff6f59;--tint:#ffe4de}.c2{--ic:#1aa1d6;--tint:#dcf1fb}.c3{--ic:#ffa51f;--tint:#fff0cc}
+.c4{--ic:#12b5a8;--tint:#d6f5f1}.c5{--ic:#2bb673;--tint:#daf5e5}.c6{--ic:#ff8a3d;--tint:#ffe7d3}
+.c7{--ic:#ff5c8a;--tint:#ffe0ea}.c8{--ic:#6b73ee;--tint:#e3e5fc}
+
+/* tiles */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 0 10px;margin-top:-70px;position:relative;z-index:2}
+.tile{display:flex;flex-direction:column;gap:7px;background:linear-gradient(160deg,#fff 42%,var(--tint));border:1px solid var(--tint);border-radius:var(--r);padding:12px 14px;text-decoration:none;color:var(--ink);box-shadow:0 5px 16px rgba(8,58,82,.12);transition:transform .12s}
+.tile:active{transform:scale(.97)}
+.tile .box{width:44px;height:44px;border-radius:14px;background:var(--ic);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 10px rgba(0,0,0,.16)}
+.tile b{font-size:16px;line-height:1.2;display:block}
+.tile small{color:var(--mute);font-size:12.5px;line-height:1.3;display:block;margin-top:2px}
+.tile.wide{grid-column:1/-1;flex-direction:row;align-items:center}
+.tile.cta{--ic:#ff6f59;background:#fff;border:2px solid #ff6f59;box-shadow:0 8px 20px rgba(255,111,89,.25)}
+.tile.cta .go{color:#ff6f59;opacity:1}
+.tile .go{margin-left:auto;font-size:24px;opacity:.55}
+
+/* inner pages */
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:calc(env(safe-area-inset-top) + 10px) 0 10px}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center}
+.back{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--deep);font-weight:700;background:var(--sand);padding:8px 14px 8px 10px;border-radius:99px;font-size:15px}
+.back .ic{width:20px;height:20px}
+.page{padding:18px 0 40px}
+.ptitle{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-size:24px;color:var(--deep);line-height:1.2}
+.ptitle .box{width:48px;height:48px;border-radius:14px;background:var(--ic);color:#fff;box-shadow:0 5px 10px rgba(0,0,0,.16);display:flex;align-items:center;justify-content:center;flex:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:12px;border-top:4px solid var(--ic,#12b5a8)}
+h3{margin:18px 0 4px;font-size:16px;color:var(--deep)}h3:first-child{margin-top:0}
+ul{margin:6px 0 0;padding-left:20px}li{margin:5px 0}
+p{margin:8px 0}
+.btn{display:inline-block;margin:8px 8px 0 0;padding:12px 18px;border-radius:12px;background:#ec5a43;color:#fff;text-decoration:none;box-shadow:0 4px 10px rgba(236,90,67,.3);font:600 15px system-ui;border:0;cursor:pointer}
+.btn.alt{background:var(--sand);color:var(--deep);box-shadow:none}
+.note{background:var(--warn);border-radius:12px;padding:10px 12px;margin:12px 0 0;font-size:15px}
+.copy{width:100%;text-align:left;background:var(--sand);border:1px dashed var(--sea);border-radius:12px;padding:12px 14px;margin-top:10px;font:inherit;cursor:pointer;color:var(--ink)}
+.copy small{display:block;color:var(--mute)}.copy b{font-size:19px;word-break:break-all}
+.place{padding:11px 0;border-top:1px solid var(--line)}
+h3+.place{border-top:0}
+.place b{display:block}.place .m{color:var(--mute);font-size:14px}
+.place a{display:inline-block;margin-top:2px;font-weight:600;color:var(--sea)}
+details{border-top:1px solid var(--line);padding:11px 0}details:first-child{border-top:0}
+summary{font-weight:600;cursor:pointer}
+details p{margin:6px 0 0}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:14px 16px 100px}
+#install{display:none;position:fixed;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom) + 12px);background:var(--deep);color:#fff;border-radius:14px;padding:12px 14px;z-index:9;font-size:14px;box-shadow:0 6px 24px rgba(0,0,0,.25);max-width:656px;margin:0 auto}
+#install button{float:right;margin-left:10px;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+#toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#222;color:#fff;padding:8px 14px;border-radius:99px;font-size:14px;opacity:0;transition:.2s;pointer-events:none;z-index:10}
+#toast.on{opacity:1}
+
+/* ===== Option B: weather-app style ===== */
+:root{--bg:#dbe9fc}
+body{background:linear-gradient(180deg,#9fcbfa 0,#c3dcfb 360px,#dbe9fc 720px) no-repeat #dbe9fc;color:#14253a}
+.pill{display:flex;align-items:center;gap:10px;margin-top:calc(env(safe-area-inset-top) + 14px);background:rgba(255,255,255,.88);border-radius:999px;padding:8px 8px 8px 16px;box-shadow:0 2px 8px rgba(20,52,90,.12);color:#14345a}
+.pill .ic{width:22px;height:22px;color:#5b6b7d}
+.ptxt{flex:1;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pill .lang{background:#e6effb}
+.now{padding:26px 2px 0}
+.nlbl{font-size:16px;color:#14345a}
+.nbig{display:flex;align-items:center;gap:10px;margin:2px 0 4px}
+.nbig b{font-size:40px;font-weight:600;letter-spacing:-.5px;line-height:1.1;color:#0d2038}
+.sun{width:40px;height:40px;flex:none;filter:drop-shadow(0 3px 4px rgba(255,140,0,.35))}
+.nsub{font-size:15px;color:#3a5473}
+.np{margin:10px 0 0;font-size:15px;line-height:1.4;color:#2b4668}
+.artwrap{margin-top:6px}
+.artwrap .heroArt{margin:0 auto}
+.artwrap .heroArt::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(to bottom,rgba(219,233,252,0),#dbe9fc);pointer-events:none;z-index:2}
+.artwrap .dots{bottom:12px;z-index:3}
+.artwrap .dots i{background:rgba(20,52,90,.3)}
+.artwrap .dots i.on{background:#14345a}
+.promo{position:relative;overflow:hidden;background:#31608f;color:#fff;border-radius:20px;padding:18px;margin:2px 0 0}
+.promo p{margin:0 0 14px;max-width:70%;font-size:16px;line-height:1.35;font-weight:500}
+.pbtns{display:flex;gap:10px;flex-wrap:wrap}
+.pbtn{display:inline-flex;align-items:center;padding:11px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;font:600 15px system-ui}
+.pbtn.fill{background:#dbe9fc;color:#14345a;border-color:transparent}
+.phone{position:absolute;right:-8px;top:-2px;width:104px;height:78px;background:#102c4d;border-radius:0 0 0 22px;padding:14px 0 0 16px;display:flex;gap:8px}
+.phone i{width:30px;height:30px;border-radius:50%;background:#6f8fb3;display:block}
+.phone i:first-child{background:#ffc94a}
+.phone u{position:absolute;left:16px;right:0;bottom:12px;height:14px;border-radius:8px 0 0 8px;background:#4a6f99}
+.sec{margin:22px 2px 10px;font-size:20px;font-weight:500;color:#14345a}
+.qcard{display:flex;overflow-x:auto;scrollbar-width:none;background:#fff;border-radius:20px;padding:14px 6px}
+.qcard::-webkit-scrollbar{display:none}
+.qi{flex:0 0 74px;text-align:center}
+.qv{font-size:18px;font-weight:500;color:#14253a}
+.qb{width:36px;height:36px;border-radius:50%;background:var(--ic);color:#fff;display:flex;align-items:center;justify-content:center;margin:9px auto 8px;box-shadow:0 4px 8px rgba(0,0,0,.14)}
+.qb .ic{width:20px;height:20px}
+.ql{font-size:12.5px;color:#5b6b7d}
+.row{display:flex;align-items:center;gap:10px;background:#fff;border-radius:16px;padding:11px 14px;margin-bottom:7px;text-decoration:none;color:#14253a}
+.row:active{transform:scale(.985)}
+.rl{flex:1;font-size:16px;font-weight:500}
+.rb{width:38px;height:38px;border-radius:12px;background:var(--ic);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 8px rgba(0,0,0,.14);flex:none}
+.rb .ic{width:22px;height:22px}
+.rv{width:116px;text-align:right;font-size:13px;line-height:1.3;color:#4b5d73}
+
+/* ===== B refinements ===== */
+.topline{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:calc(env(safe-area-inset-top) + 14px)}
+.now{padding:0 2px}
+.nbig{margin:6px 0 2px}
+.nbig b{font-size:34px}
+.sun{width:34px;height:34px}
+.np{margin:8px 0 0}
+.artwrap .heroArt{aspect-ratio:360/190}
+a.promo{display:flex;align-items:center;gap:12px;padding:12px 14px;text-decoration:none;margin:0}
+.pc{width:40px;height:40px;border-radius:50%;background:#ffc94a;color:#31608f;display:flex;align-items:center;justify-content:center;flex:none}
+.pl{flex:1;font-size:17px;font-weight:600;color:#fff;line-height:1.25}
+.pgo{background:#dbe9fc;color:#14345a;border-radius:999px;padding:9px 16px;font:600 15px system-ui;white-space:nowrap}
+.sec{margin:16px 2px 8px}
+.row{padding:10px 14px}
+.nlbl{font-size:15px}
+.pgo{width:36px;height:36px;padding:0;display:flex;align-items:center;justify-content:center;font-size:24px;line-height:1}
+
+/* ===== B: card hero (text on top, painted scene at the bottom) ===== */
+.hcard{background:#f4f6f9;border-radius:26px;overflow:hidden;margin:calc(env(safe-area-inset-top) + 12px) auto 12px;max-width:560px;box-shadow:0 3px 12px rgba(20,52,90,.12)}
+.hcard .now{padding:14px 18px 6px}
+.hcard .topline{margin-top:0}
+.hcard .lang{background:#e3eaf3}
+.artwrap{margin:0}
+.artwrap .heroArt{aspect-ratio:360/170;max-width:none;-webkit-mask-image:none;mask-image:none}
+.artwrap .heroArt::after{display:none}
+.artwrap .dots{bottom:6px}
+.artwrap .dots i{background:rgba(255,255,255,.7)}
+.artwrap .dots i.on{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+
+.hcard .now{padding:14px 16px 6px}
+.hcard .nlbl{font-size:14px}
+.hcard .lang button{padding:5px 10px;font-size:12px}
+.hcard .np{font-size:14px;line-height:1.38}
+.artwrap .dots{justify-content:flex-end;padding-right:14px}
+
+/* ===== B: frameless hero, scene merges into the white-grey top ===== */
+body{background:linear-gradient(180deg,#a2cdfa 300px,#c4dcfb 700px,#dbe9fc 1000px) no-repeat #dbe9fc}
+.hero2{background:#f4f6f9;padding-top:calc(env(safe-area-inset-top) + 12px)}
+.hero2 .now{padding:10px 2px 6px}
+.hero2 .topline{margin-top:0}
+.hero2 .nlbl{font-size:14px}
+.hero2 .lang{background:#e3eaf3}
+.hero2 .lang button{padding:5px 10px;font-size:12px}
+.hero2 .np{font-size:14px;line-height:1.38}
+.hero2 .artwrap .heroArt{max-width:560px;margin:0 auto;aspect-ratio:360/170;-webkit-mask-image:none;mask-image:none}
+@media(min-width:561px){.hero2 .artwrap .heroArt{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}}
+.hero2 .artwrap .dots{bottom:18px;justify-content:flex-end;padding-right:14px}
+/* soft fade so the photo melts into the header above it */
+.hero2 .artwrap .heroArt::before{content:"";position:absolute;left:0;right:0;top:0;height:20%;background:linear-gradient(to bottom,#f4f6f9,rgba(244,246,249,0));pointer-events:none;z-index:2}
+main.wrap{position:relative;z-index:2}
+a.promo{margin-top:-12px}
+
+/* B: two-column cards */
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rgrid .row{display:grid;grid-template-columns:auto 1fr;column-gap:10px;row-gap:1px;align-items:center;align-content:center;margin:0;padding:11px 12px;min-height:66px;border-radius:18px;box-shadow:0 3px 10px rgba(20,52,90,.08)}
+.rgrid .rb{grid-row:1/3;grid-column:1;width:40px;height:40px}
+.rgrid .rl{grid-column:2;grid-row:1;align-self:end;font-size:14.5px;white-space:nowrap;font-weight:600;line-height:1.2}
+.rgrid .rv{grid-column:2;grid-row:2;align-self:start;width:auto;text-align:left;font-size:12px;line-height:1.25}
+.rgrid .row.wide{grid-column:1/-1}
+
+/* ===== Sand background + vivid gradient tiles ===== */
+:root{--bg:#fbf3e3;--line:#efe2c8;--sand:#f6e7c8}
+html,body{background:#fbf3e3}
+.c1{--ic:#ff5e3a;--ic2:#ff9a3c}.c2{--ic:#1670f0;--ic2:#25c2ff}.c3{--ic:#f08c00;--ic2:#ffc42e}.c4{--ic:#06a5a3;--ic2:#33d8c5}
+.c5{--ic:#1c9a52;--ic2:#55cc7b}.c6{--ic:#ff3f66;--ic2:#ff7e5a}.c7{--ic:#d9327c;--ic2:#ff6aa6}.c8{--ic:#4f58e6;--ic2:#8b7dff}
+.sec{color:#0e2a52;font-weight:700}
+.gtiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gtile{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:12px;min-height:116px;padding:14px;border-radius:22px;color:#fff;text-decoration:none;background:linear-gradient(145deg,var(--ic),var(--ic2));box-shadow:0 12px 22px -12px var(--ic);transition:transform .12s}
+.gtile:active{transform:scale(.97)}
+.gb{width:42px;height:42px;border-radius:14px;background:rgba(255,255,255,.26);display:flex;align-items:center;justify-content:center}
+.gb .ic{width:24px;height:24px}
+.gl{display:block;font-size:17px;line-height:1.15;font-weight:800}
+.gv{display:block;font-size:12.5px;opacity:.93;margin-top:2px;line-height:1.25}
+.ghost{position:absolute;right:-12px;bottom:-14px;width:92px;height:92px;opacity:.17;stroke-width:1.3}
+.gtile.wide{grid-column:1/-1;min-height:0;flex-direction:row;align-items:center;justify-content:flex-start;gap:14px;padding:12px 14px}
+.gtile.wide .ghost{width:70px;height:70px;right:-4px;bottom:-8px}
+.gtile.c3{color:#3a2300}.gtile.c3 .gb{background:rgba(255,255,255,.4)}
+.ptitle .box{background:linear-gradient(145deg,var(--ic),var(--ic2))}
+
+/* compact cards: icon left, title + description stacked on the right */
+.gtile{flex-direction:row;align-items:center;justify-content:flex-start;gap:11px;min-height:76px;padding:12px}
+.gb{flex:none}
+.gt{min-width:0}
+.gl{font-size:15.5px;white-space:nowrap}
+.gv{font-size:12px}
+.ghost{width:62px;height:62px;right:-10px;bottom:-12px}
+.gtile.wide .ghost{width:62px;height:62px}
+
+.gtile,.gtile.wide{padding:12px 11px;gap:10px}
+.gb{width:38px;height:38px;border-radius:12px}
+.gb .ic{width:22px;height:22px}
+.gl{font-size:15px;white-space:normal;line-height:1.15}
+
+/* softer top fade, new bottom fade into the sand, and soft seams between photos */
+.hero2 .artwrap .heroArt::before{height:9%}
+.hero2 .artwrap .heroArt::after{display:block;content:"";position:absolute;left:0;right:0;bottom:0;height:16%;background:linear-gradient(to bottom,rgba(251,243,227,0),#fbf3e3);pointer-events:none;z-index:2}
+.hero2{background:linear-gradient(#f4f6f9 70%,#fbf3e3)}
+.slide{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%)}
+.hero2 .artwrap .dots{bottom:22px}
+
+.hero2 .artwrap .heroArt::after{height:26%}
+.slide{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%)}
+.hero2 .artwrap .dots{bottom:26px}
+.hero2 .artwrap .heroArt::after{bottom:-2px;z-index:3;transform:translateZ(0)}
+.hero2 .artwrap .dots{z-index:4}
+main.wrap{z-index:6;transform:translateZ(0)}
+.hero2 .artwrap .heroArt{overflow:hidden}
+
+/* compact header: tagline beside the title, less top padding */
+.hero2{padding-top:calc(env(safe-area-inset-top) + 4px)}
+.hero2 .now{padding:6px 2px 2px}
+.hero2 .nbig{margin:2px 0 0;gap:8px}
+.hero2 .nbig b{font-size:31px;white-space:nowrap}
+.hero2 .sun{width:28px;height:28px}
+.ntag{margin-left:auto;max-width:112px;text-align:right;font-size:13px;line-height:1.25;font-weight:600;font-style:italic;color:#c2621a}
+.hero2 .np{margin-top:4px}
+.hero2 .np b{color:#0e2a52}
+
+/* check-in button in coral/orange to match the tiles */
+a.promo{background:linear-gradient(100deg,#ff5e3a,#ff9a3c);box-shadow:0 14px 26px -12px #ff5e3a}
+a.promo .pc{background:rgba(255,255,255,.28);color:#fff}
+a.promo .pgo{background:#fff;color:#ff5e3a}
+
+/* red alert card + wifi QR */
+.card.alert{--ic:#e03131;background:#fff0ee;border-color:#ffc9c2;color:#b42318}
+.card.alert p{margin:6px 0}
+.card.alert b{color:#9b1c13}
+.qrbox{text-align:center;margin-top:14px}
+.qrbox .qr{width:180px;height:180px;display:block;margin:0 auto;background:#fff;border-radius:12px}
+.qrbox p{font-size:13.5px;color:var(--mute);margin:8px 0 0}
+
+/* round 2 */
+.card.alert{background:#fff;border-color:var(--line)}
+.card.emerg{--ic:#e03131}
+.card.emerg h3{color:#b42318}
+.hero2 .nlbl{font-size:15px}
+.hero2 .np{font-size:15px}
+.hero2 .nbig b{font-size:28px}
+.hero2 .sun{width:24px;height:24px}
+.ntag{max-width:none;white-space:nowrap;font-size:12.5px}
+.gb{width:44px;height:44px;border-radius:14px}
+.gb .ic{width:26px;height:26px}
+.gv{font-size:15px;line-height:1.2}
+.gl{font-size:16px}
+
+.hero2 .nbig{gap:6px}
+.hero2 .nbig b{font-size:27px}
+.ntag{font-size:12px;letter-spacing:-.1px}
+.gtile,.gtile.wide{padding:12px 10px;gap:9px}
+
+.hero2 .nbig{flex-wrap:wrap;row-gap:0}
+.hero2 .nbig b{font-size:26px}
+
+/* stronger red alert */
+.card.alert{--ic:#e31b23;border:2px solid #e31b23;border-top-width:5px;color:#d0121b;box-shadow:0 8px 18px -12px #e31b23}
+.card.alert b{color:#b80d15}
+.card.alert p:first-child::before{content:"⚠️ "}
+.red{color:#d0121b;font-weight:600}
+.treal{margin:-4px 0 12px;color:var(--mute);font-size:14px}
+.tgal{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tgal:empty{display:none}
+.tgal figure{margin:0}
+.tgal a{display:block;color:inherit;text-decoration:none}
+.tgal img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;background:var(--sand)}
+.tgal figcaption{font-size:12.5px;color:var(--mute);margin-top:4px;line-height:1.3}
+.illus{position:absolute;left:12px;bottom:14px;z-index:3;pointer-events:none;background:rgba(20,52,90,.62);color:#fff;font-size:11px;line-height:1;padding:5px 9px;border-radius:99px;letter-spacing:.2px}
+.tcol a{display:block;margin-top:8px}.tcol img{display:block;width:100%;height:auto;border-radius:12px;background:var(--sand)}
+/* cartões da home: um pouco menores, ajustam à altura da tela */
+html{overscroll-behavior-y:none}
+.gtiles{gap:clamp(6px,1vh,10px)}
+.gtile,.gtile.wide{min-height:clamp(48px,6.6vh,62px);padding:8px 11px;border-radius:18px}
+.gtile .gb{width:34px;height:34px;border-radius:11px}
+.gtile .gb .ic{width:20px;height:20px}
+.gtile .gl{font-size:15px}
+.gtile .gv{font-size:11.8px}
+.gtile .ghost{width:54px;height:54px}
+footer{padding:8px 16px 12px}
+/* home dinâmica: preenche a altura da tela */
+#home{display:flex;flex-direction:column;min-height:100vh;min-height:100dvh}
+#home>main.wrap{flex:1 1 auto;display:flex;flex-direction:column;width:100%}
+#home .gtiles{--th:clamp(48px,calc(60px + (100vh - 916px)*.15),78px);flex:1 1 auto;grid-auto-rows:minmax(var(--th),auto);align-content:space-between;row-gap:clamp(8px,1.2vh,16px);column-gap:10px}
+/* telas altas (ex.: Fold fechado): letras e ícones crescem um pouco */
+#home .gtile .gl{font-size:clamp(15px,calc(15px + (100vh - 920px)*.025),17.5px)}
+#home .gtile .gv{font-size:clamp(11.8px,calc(11.8px + (100vh - 920px)*.02),13.5px)}
+#home .gtile .gb{width:clamp(34px,calc(34px + (100vh - 920px)*.07),42px);height:clamp(34px,calc(34px + (100vh - 920px)*.07),42px)}
+#home .gtile .gb .ic{width:clamp(20px,calc(20px + (100vh - 920px)*.04),24px);height:clamp(20px,calc(20px + (100vh - 920px)*.04),24px)}
+#home>footer{margin-top:auto}
+#lb{position:fixed;inset:0;z-index:30;background:#000;touch-action:none;overflow:hidden;-webkit-user-select:none;user-select:none}
+#lb[hidden]{display:none}
+#lbi{position:absolute;left:0;top:0;max-width:none;transform-origin:0 0;will-change:transform;-webkit-user-drag:none}
+.lbx{position:absolute;top:calc(env(safe-area-inset-top) + 12px);right:14px;z-index:2;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.22);color:#fff;font-size:28px;line-height:1;cursor:pointer}
+.lbh{position:absolute;left:0;right:0;bottom:calc(env(safe-area-inset-bottom) + 14px);text-align:center;color:rgba(255,255,255,.7);font-size:12px;pointer-events:none}
+.tcol img{cursor:zoom-in}
+/* opção A: ícones coloridos, sem cartão (exceto "Conheça") */
+#home .gtiles .gtile:not([href="#tour"]){background:transparent;box-shadow:none;border:0;border-radius:0;color:#14253a;border-bottom:1px solid rgba(20,37,58,.10)}
+#home .gtiles .gtile:not([href="#tour"]) .gb{background:linear-gradient(145deg,var(--ic),var(--ic2));color:#fff;border-radius:50%}
+#home .gtiles .gtile:not([href="#tour"]) .gv{color:#5b6b7d;opacity:1}
+#home .gtiles .gtile:not([href="#tour"]) .ghost{display:none}
+/* fundo de praia a partir do "Guia do apartamento" */
+#home{overflow-x:hidden}
+.gbg{position:relative;flex:1 1 auto;display:flex;flex-direction:column}
+.gbg::before{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);z-index:-1;
+  background:linear-gradient(to bottom,#fbf3e3 0,rgba(251,243,227,.85) 9%,rgba(251,243,227,0) 26%),url(img/fundo-praia.webp) center top/cover no-repeat}
+.gbg .gtiles{background:rgba(255,255,255,var(--box,.5));-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:22px;padding:0 12px;box-shadow:0 10px 30px -14px rgba(20,37,58,.35)}
+.gbg footer{margin-top:auto;padding:8px 16px 12px;color:#14253a;text-shadow:0 1px 6px rgba(255,255,255,.9);font-weight:500}
+a.promo .pl{display:flex;flex-direction:column;gap:3px;line-height:1.2}
+a.promo .ptt{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+a.promo .psub{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;opacity:.95}
+a.promo .pbadge{background:#fff;color:#e8492a;font:800 10px/1 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:99px}
+a.promo::after{content:"";position:absolute;top:0;bottom:0;left:-45%;width:35%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.6),rgba(255,255,255,0));transform:skewX(-20deg);animation:shine 1.4s .7s ease-out 2;pointer-events:none}
+@keyframes shine{to{left:135%}}
+@media (prefers-reduced-motion:reduce){a.promo::after{display:none}}
+.btn.tally{position:relative;overflow:hidden}
+.btn.tally::after{content:"";position:absolute;top:0;bottom:0;left:-45%;width:35%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.6),rgba(255,255,255,0));transform:skewX(-20deg);animation:shine 1.4s .4s ease-out 2;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.btn.tally::after{display:none}}
+</style>
+</head>
+<body>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 4h6v3H9z"/><path d="M7 5H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1"/><path d="M9 14l2 2 4-4"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 9a15 15 0 0120 0"/><path d="M5 12.5a10.5 10.5 0 0114 0"/><path d="M8.5 16a5.5 5.5 0 017 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-beach" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0118 0z"/><path d="M12 12v8"/><path d="M3 20.5q2.2-1.6 4.5 0t4.5 0 4.5 0 4.5 0"/></symbol>
+  <symbol id="i-pool" viewBox="0 0 24 24"><path d="M8 4v10"/><path d="M15 4v10"/><path d="M8 7.5h7"/><path d="M8 11h7"/><path d="M2 17q2.5-2 5 0t5 0 5 0 5 0"/><path d="M2 21q2.5-2 5 0t5 0 5 0 5 0"/></symbol>
+  <symbol id="i-rules" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M10 4H5a1 1 0 00-1 1v14a1 1 0 001 1h5"/><path d="M15 8l4 4-4 4"/><path d="M19 12H9"/></symbol>
+  <symbol id="i-eat" viewBox="0 0 24 24"><path d="M6 3v6a2 2 0 004 0V3"/><path d="M8 11v10"/><path d="M17 3c-2.2 1.8-3 4.2-3 7h3v11"/></symbol>
+  <symbol id="i-faq" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 115 0c0 1.7-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20v-1.5A4.5 4.5 0 017.5 14h3A4.5 4.5 0 0115 18.5V20"/><path d="M16 5.2a3.2 3.2 0 010 5.6M18.5 14.4A4.5 4.5 0 0121 18.5V20"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 15v-3l2-5h14l2 5v3z"/><path d="M6 15v3M18 15v3M3 12h18"/></symbol>
+</svg>
+
+<!-- HOME -->
+<div id="home">
+  <div class="hero2">
+    <div class="wrap"><div class="now">
+      <div class="topline"><div class="nlbl"><span class="pt">Sejam bem-vindos ao Apartamento</span><span class="en">Welcome to Apartamento</span></div><div class="lang"><button class="bpt" type="button">PT</button><button class="ben" type="button">EN</button></div></div>
+      <div class="nbig"><b>Sol Nascente</b><svg class="sun" viewBox="0 0 44 44" aria-hidden="true"><defs><radialGradient id="sg" cx=".4" cy=".35"><stop offset="0" stop-color="#ffd24a"/><stop offset="1" stop-color="#ff9a0a"/></radialGradient></defs><g fill="url(#sg)"><circle cx="36.50" cy="22.00" r="6.6"/><circle cx="34.56" cy="29.25" r="6.6"/><circle cx="29.25" cy="34.56" r="6.6"/><circle cx="22.00" cy="36.50" r="6.6"/><circle cx="14.75" cy="34.56" r="6.6"/><circle cx="9.44" cy="29.25" r="6.6"/><circle cx="7.50" cy="22.00" r="6.6"/><circle cx="9.44" cy="14.75" r="6.6"/><circle cx="14.75" cy="9.44" r="6.6"/><circle cx="22.00" cy="7.50" r="6.6"/><circle cx="29.25" cy="9.44" r="6.6"/><circle cx="34.56" cy="14.75" r="6.6"/><circle cx="22" cy="22" r="16"/></g></svg><span class="ntag"><span class="pt">Será um prazer recebê-los!</span><span class="en">A pleasure to host you!</span></span></div>
+      <p class="np"><span class="pt">Este é o seu <b>guia de boas-vindas</b>: tudo o que vocês precisam para a estadia, em um só lugar.</span><span class="en">This is your <b>welcome guide</b>: everything you need for your stay, in one place.</span></p>
+    </div></div>
+    <div class="artwrap"><div class="heroArt">
+        <div class="slides">
+          <!-- Capas (arquivos em img/Stylised/). Apague uma linha para tirar a foto; os pontos se ajustam. -->
+          <div class="slide"><img src="img/Stylised/praia-dia.webp" width="900" height="600" alt="Orla de Praia Grande vista de cima, com palmeiras e mar azul" decoding="async" fetchpriority="high"></div>
+          <div class="slide"><img src="img/Stylised/piscina.webp" width="900" height="600" alt="Piscina com espreguiçadeiras e vista para o mar" decoding="async" loading="lazy"></div>
+          <div class="slide"><img src="img/Stylised/Sala.webp" width="900" height="600" alt="Sala do apartamento" decoding="async" loading="lazy"></div>
+          <div class="slide"><img src="img/Stylised/praia-amanhecer.webp" width="900" height="600" alt="Amanhecer na praia" decoding="async" loading="lazy"></div>
+          <div class="slide"><img src="img/Stylised/amanhecer-1.webp" width="900" height="404" alt="Calçadão com palmeiras ao amanhecer" decoding="async" loading="lazy"></div>
+          <div class="slide"><img src="img/Stylised/amanhecer-2.webp" width="900" height="600" alt="Palmeiras e mar ao amanhecer" decoding="async" loading="lazy"></div>
+        </div>
+        <span class="illus"><span class="pt">Imagens ilustrativas</span><span class="en">Illustrative images</span></span>
+        <div class="dots"></div>
+      </div></div>
+  </div>
+  <main class="wrap">
+    <a class="promo" href="#checkin"><span class="pc"><svg class="ic"><use href="#i-check"/></svg></span><span class="pl"><span class="ptt"><span class="pt">Faça o check-in online</span><span class="en">Do your online check-in</span></span><small class="psub"><b class="pbadge"><span class="pt">Obrigatório</span><span class="en">Required</span></b><span class="pt">antes da chegada · leva 2 min</span><span class="en">before arrival · takes 2 min</span></small></span><span class="pgo">›</span></a>
+    <div class="gbg">
+    <h2 class="sec"><span class="pt">Guia do apartamento</span><span class="en">Apartment guide</span></h2>
+    <div class="gtiles"><a class="gtile c2 wide" href="#tour"><span class="gb"><svg class="ic"><use href="#i-home"/></svg></span><span class="gt"><b class="gl"><span class="pt">Conheça o prédio e o apartamento</span><span class="en">Get to know the building &amp; apartment</span></b></span><svg class="ic ghost" aria-hidden="true"><use href="#i-home"/></svg></a><a class="gtile c1" href="#arrival"><span class="gb"><svg class="ic"><use href="#i-pin"/></svg></span><span class="gt"><b class="gl"><span class="pt">Chegada</span><span class="en">Arrival</span></b><small class="gv"><span class="pt">Endereço</span><span class="en">Address</span></small></span><svg class="ic ghost" aria-hidden="true"><use href="#i-pin"/></svg></a><a class="gtile c2" href="#wifi"><span class="gb"><svg class="ic"><use href="#i-wifi"/></svg></span><span class="gt"><b class="gl"><span class="pt">Wi-Fi</span><span class="en">Wi-Fi</span></b><small class="gv"><span class="pt">Rede e senha</span><span class="en">Network &amp; password</span></small></span><svg class="ic ghost" aria-hidden="true"><use href="#i-wifi"/></svg></a><a class="gtile c3" href="#beach"><span class="gb"><svg class="ic"><use href="#i-beach"/></svg></span><span class="gt"><b class="gl"><span class="pt">Praia</span><span class="en">Beach</span></b><small class="gv"><span class="pt">Lava-pés</span><span class="en">Foot wash</span></small></span><svg class="ic ghost" aria-hidden="true"><use href="#i-beach"/></svg></a><a class="gtile c4" href="#pool"><span class="gb"><svg class="ic"><use href="#i-pool"/></svg></span><span class="gt"><b class="gl"><span class="pt">Piscina</span><span class="en">Pool</span></b><small class="gv"><span class="pt">9h–21h</span><span class="en">9am–9pm</span></small></span><svg class="ic ghost" aria-hidden="true"><use href="#i-pool"/></svg></a><a class="gtile c5" href="#rules"><span class="gb"><svg class="ic"><use href="#i-rules"/></svg></span><span class="gt"><b class="gl"><span class="pt">Regras da casa</span><span class="en">House rules</span></b><small class="gv"><span class="pt">Silêncio</span><span class="en">Quiet hours</span></small></span><svg class="ic ghost" aria-hidden="true"><use href="#i-rules"/></svg></a><a class="gtile c6" href="#checkout"><span class="gb"><svg class="ic"><use href="#i-out"/></svg></span><span class="gt"><b class="gl"><span class="pt">Check-out</span><span class="en">Check-out</span></b><small class="gv"><span class="pt">até 10h</span><span class="en">by 10 am</span></small></span><svg class="ic ghost" aria-hidden="true"><use href="#i-out"/></svg></a><a class="gtile c7" href="#local"><span class="gb"><svg class="ic"><use href="#i-eat"/></svg></span><span class="gt"><b class="gl"><span class="pt">Dicas locais</span><span class="en">Local tips</span></b><small class="gv"><span class="pt">Comer e passear</span><span class="en">Eat &amp; explore</span></small></span><svg class="ic ghost" aria-hidden="true"><use href="#i-eat"/></svg></a><a class="gtile c8" href="#faq"><span class="gb"><svg class="ic"><use href="#i-faq"/></svg></span><span class="gt"><b class="gl"><span class="pt">FAQ</span><span class="en">FAQ</span></b><small class="gv"><span class="pt">Dúvidas</span><span class="en">Questions</span></small></span><svg class="ic ghost" aria-hidden="true"><use href="#i-faq"/></svg></a><a class="gtile c4 wide" href="#contact"><span class="gb"><svg class="ic"><use href="#i-chat"/></svg></span><span class="gt"><b class="gl"><span class="pt">Contato</span><span class="en">Contact</span></b><small class="gv"><span class="pt">WhatsApp · emergências</span><span class="en">WhatsApp · emergency</span></small></span><svg class="ic ghost" aria-hidden="true"><use href="#i-chat"/></svg></a></div>
+    <footer><span class="pt">Aproveitem a estadia!</span><span class="en">Enjoy your stay!</span></footer>
+    </div>
+  </main>
+
+</div>
+
+<!-- PAGE BAR -->
+<div class="bar" id="bar" hidden>
+  <div class="wrap">
+    <a class="back" id="back" href="#"><svg class="ic"><use href="#i-back"/></svg><span class="pt">Início</span><span class="en">Home</span></a>
+    <div class="lang"><button class="bpt" type="button">PT</button><button class="ben" type="button">EN</button></div>
+  </div>
+</div>
+
+<div class="wrap" id="pages">
+
+<!-- TOUR -->
+<section class="page c2" id="p-tour" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-home"/></svg></span><span class="pt">Conheça o prédio e o apartamento</span><span class="en">Get to know the building &amp; apartment</span></h2>
+  <p class="treal"><span class="pt">Toque na foto para ampliar.</span><span class="en">Tap a photo to enlarge.</span></p>
+  <div id="tg"></div>
+  <div class="card tempty" hidden><p class="pt">As fotos estarão disponíveis em breve.</p><p class="en">Photos coming soon.</p></div>
+</section>
+
+<!-- ARRIVAL -->
+<section class="page c1" id="p-arrival" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-pin"/></svg></span><span class="pt">Chegada</span><span class="en">Arrival</span></h2>
+  <div class="card">
+    <p><b>Residencial Melissa Miyazi</b><br>Av. Presidente Castelo Branco, 16140 · Apto 93<br>Jardim Real, Praia Grande – SP · CEP 11707-450</p>
+    <a class="btn" href="https://maps.app.goo.gl/XCwpM6y2o1YqaQpL9?g_st=ac" target="_blank" rel="noopener"><span class="pt">Abrir no mapa</span><span class="en">Open in maps</span></a>
+  </div>
+  <div class="card pt">
+    <h3>Check-in: a partir das 13h</h3>
+    <ul>
+      <li>Façam o <b>check-in online até 48 h antes</b> da chegada (exceções possíveis, é só avisar).</li>
+      <li>A portaria funciona 24h. Os funcionários vão recebê-los e conferir os documentos.</li>
+      <li>A <b>senha da fechadura eletrônica</b> do apartamento é enviada no dia do check-in, depois que o check-in online for confirmado.</li>
+      <li>De carro? Informe placa e modelo no formulário. Há 1 vaga; deixe o crachá do apartamento visível dentro do veículo. A portaria abre o portão.</li>
+    </ul>
+  </div>
+  <div class="card en">
+    <h3>Check-in: from 1 pm</h3>
+    <ul>
+      <li>Please complete the <b>online check-in up to 48 h before</b> arrival (exceptions possible, just let us know).</li>
+      <li>Reception is open 24h. Staff will welcome you and check your documents.</li>
+      <li>The apartment's <b>electronic door lock code</b> is sent on check-in day, once your online check-in is confirmed.</li>
+      <li>Coming by car? Add plate and model in the form. There is 1 parking space; keep the apartment badge visible inside the car. Reception opens the gate.</li>
+    </ul>
+  </div>
+  <div class="card alert pt"><p><b>Só entram os hóspedes informados na reserva.</b> Hóspedes extras não autorizados resultam em cancelamento imediato da reserva.</p><p>Para incluir mais um hóspede, avisem com antecedência.</p></div>
+  <div class="card alert en"><p><b>Only the guests listed in the booking may enter.</b> Unauthorised extra guests will result in immediate cancellation of the booking.</p><p>To add a guest, please let us know in advance.</p></div>
+  <a class="btn tally" href="#" target="_blank" rel="noopener"><span class="pt">Fazer check-in online</span><span class="en">Do online check-in</span></a>
+</section>
+
+<!-- ONLINE CHECK-IN -->
+<section class="page c1" id="p-checkin" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-check"/></svg></span><span class="pt">Check-in online</span><span class="en">Online check-in</span></h2>
+  <div class="card">
+    <p class="pt">Preencham o formulário até <b>48 horas antes da chegada</b>. Reserva de última hora? Avisem pelo WhatsApp.</p>
+    <p class="en">Please fill in the form <b>up to 48 hours before arrival</b>. Last-minute booking? Message us on WhatsApp.</p>
+    <p class="en note">🌐 The form is in Portuguese. Your browser can translate it (Chrome: ⋮ → Translate; Safari: aA → Translate).</p>
+    <ul class="pt">
+      <li>Nome de <b>todos os hóspedes, incluindo bebês</b>, e foto do documento de cada um.</li>
+      <li>Horário previsto de chegada.</li>
+      <li>De carro? Placa e modelo do veículo.</li>
+    </ul>
+    <ul class="en">
+      <li>Name of <b>every guest, including babies</b>, and a photo of each person's ID.</li>
+      <li>Expected arrival time.</li>
+      <li>Coming by car? Plate and model.</li>
+    </ul>
+    <p class="pt">A senha da fechadura é enviada no dia do check-in, depois que o formulário for confirmado.</p>
+    <p class="en">The door lock code is sent on check-in day, once your form is confirmed.</p>
+  </div>
+  <div class="card alert pt"><p><b>Só entram os hóspedes informados na reserva.</b> Hóspedes extras não autorizados resultam em cancelamento imediato da reserva.</p><p>Para incluir mais um hóspede, avisem com antecedência.</p></div>
+  <div class="card alert en"><p><b>Only the guests listed in the booking may enter.</b> Unauthorised extra guests will result in immediate cancellation of the booking.</p><p>To add a guest, please let us know in advance.</p></div>
+  <div class="card">
+    <p class="pt" style="margin:0">⛱️ <b>Guarda-sóis e cadeiras de praia não são fornecidos.</b></p>
+    <p class="en" style="margin:0">⛱️ <b>Beach umbrellas and chairs are not provided.</b></p>
+  </div>
+  <a class="btn tally" href="#" target="_blank" rel="noopener"><span class="pt">Abrir formulário de check-in</span><span class="en">Open check-in form</span></a>
+</section>
+
+<!-- WIFI -->
+<section class="page c2" id="p-wifi" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-wifi"/></svg></span>Wi-Fi</h2>
+  <div class="card">
+    <button class="copy" type="button" data-copy="Ewerton&Alan"><small><span class="pt">Rede (toque para copiar)</span><span class="en">Network (tap to copy)</span></small><b>Ewerton&amp;Alan</b></button>
+    <button class="copy" type="button" data-copy="Dublin&SaoPaulo"><small><span class="pt">Senha (toque para copiar)</span><span class="en">Password (tap to copy)</span></small><b>Dublin&amp;SaoPaulo</b></button>
+    <div class="qrbox"><svg role="img" aria-label="QR code Wi-Fi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" class="qr" shape-rendering="crispEdges"><path stroke="#000" d="M2 2.5h7m1 0h2m1 0h3m1 0h1m1 0h2m1 0h2m4 0h7m-33 1h1m5 0h1m2 0h2m1 0h1m2 0h4m2 0h1m2 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m3 0h4m5 0h6m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h4m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h2m2 0h2m1 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h2m2 0h1m1 0h1m3 0h1m1 0h3m3 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-24 1h2m1 0h1m3 0h1m2 0h1m1 0h4m-24 1h7m2 0h1m2 0h1m2 0h2m1 0h1m2 0h1m4 0h2m3 0h1m-33 1h6m1 0h1m1 0h1m2 0h2m4 0h2m2 0h4m5 0h2m-30 1h1m2 0h3m1 0h1m2 0h1m2 0h1m1 0h1m3 0h1m4 0h4m-31 1h1m1 0h1m1 0h2m4 0h3m1 0h2m2 0h7m1 0h5m1 0h1m-33 1h2m1 0h2m1 0h4m4 0h1m3 0h5m2 0h1m1 0h2m1 0h3m-33 1h1m1 0h3m3 0h4m1 0h1m1 0h2m1 0h2m1 0h2m3 0h1m-27 1h1m1 0h1m1 0h9m2 0h3m2 0h1m1 0h1m1 0h2m3 0h1m1 0h1m-31 1h2m2 0h1m7 0h2m1 0h1m2 0h5m1 0h2m2 0h4m-28 1h2m6 0h1m1 0h1m2 0h2m2 0h1m2 0h1m2 0h4m-23 1h1m2 0h1m1 0h3m1 0h4m3 0h1m1 0h1m1 0h2m1 0h1m-31 1h2m2 0h2m3 0h1m1 0h2m5 0h2m3 0h3m3 0h1m-30 1h1m2 0h1m4 0h2m2 0h2m1 0h1m1 0h3m1 0h2m4 0h3m-31 1h1m1 0h4m2 0h2m2 0h2m4 0h1m2 0h4m2 0h1m1 0h1m-31 1h1m1 0h1m1 0h2m2 0h1m6 0h1m3 0h3m1 0h2m1 0h1m3 0h2m-32 1h1m4 0h2m1 0h2m5 0h4m2 0h2m1 0h1m2 0h1m2 0h2m-32 1h1m1 0h3m2 0h1m2 0h3m5 0h1m1 0h4m6 0h2m-32 1h1m3 0h3m2 0h3m1 0h1m1 0h2m1 0h2m2 0h8m1 0h2m-25 1h2m1 0h1m2 0h1m2 0h1m1 0h6m3 0h1m3 0h1m-33 1h7m1 0h3m1 0h1m1 0h1m6 0h1m1 0h2m1 0h1m1 0h4m-32 1h1m5 0h1m1 0h1m1 0h2m2 0h4m2 0h3m1 0h1m3 0h1m1 0h1m-31 1h1m1 0h3m1 0h1m1 0h7m1 0h1m5 0h1m1 0h6m1 0h2m-33 1h1m1 0h3m1 0h1m1 0h3m5 0h2m1 0h7m6 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h2m1 0h2m2 0h1m3 0h1m-25 1h1m5 0h1m1 0h6m3 0h1m2 0h2m4 0h5m-31 1h7m2 0h1m1 0h1m3 0h2m3 0h1m1 0h4m1 0h2m1 0h2"/></svg><p class="pt">Para conectar outro aparelho (notebook, tablet), escaneie este código com a câmera.</p><p class="en">To connect another device (laptop, tablet), scan this code with its camera.</p></div>
+  </div>
+</section>
+
+<!-- BEACH -->
+<section class="page c3" id="p-beach" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-beach"/></svg></span><span class="pt">Praia</span><span class="en">Beach</span></h2>
+  <div class="card">
+    <ul class="pt">
+      <li>Ao voltar da praia, use o <b>lava-pés</b>. Depois, entre pela <b>garagem do térreo</b> e use o <b>elevador de serviço</b> enquanto estiver molhado(a).</li>
+      <li>Guarda-sóis e cadeiras <b>não são fornecidos</b>.</li>
+      <li><b>Não levem as toalhas do apartamento para a praia</b>: elas são apenas para banho.</li>
+      <li>Recomendamos ficar nos <b>quiosques em frente ao prédio</b>: há quiosques que não cobram aluguel de cadeiras e guarda-sóis nem consumação mínima. As regras são de cada quiosque e podem mudar, então confirmem as condições antes de se acomodar.</li>
+      <li>Seus guarda-sóis e cadeiras devem ficar no <b>armário ao lado do lava-pés</b> (cadeado e senha serão informados no check-in). Não os levem para o apartamento.</li>
+      <li>Não estendam toalhas, roupas de banho ou tapetes nas varandas e guarda-corpos.</li>
+    </ul>
+    <ul class="en">
+      <li>When you come back from the beach, use the <b>foot wash</b>. Then enter through the <b>ground-floor garage</b> and take the <b>service elevator</b> while you're wet.</li>
+      <li>Beach umbrellas and chairs are <b>not provided</b>.</li>
+      <li><b>Please don't take the apartment's towels to the beach</b>: they are for showering only.</li>
+      <li>We recommend staying at the <b>kiosks in front of the building</b>: some kiosks charge no rental for chairs and umbrellas and have no minimum spend. Each kiosk sets its own rules and they can change, so please confirm the terms before you settle in.</li>
+      <li>Your umbrellas and chairs must be kept in the <b>locker next to the foot wash</b> (padlock and code given at check-in). Please don't take them up to the apartment.</li>
+      <li>Do not hang towels, swimwear or rugs on balconies and railings.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- POOL -->
+<section class="page c4" id="p-pool" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-pool"/></svg></span><span class="pt">Piscina</span><span class="en">Pool</span></h2>
+  <div class="card">
+    <ul class="pt">
+      <li>Funcionamento: <b>9h às 21h</b>. <b>Fechada às segundas</b> (manutenção e limpeza).</li>
+      <li class="red">Proibido: comida, vidro (copos e embalagens), cigarro, narguilé e caixas de som.</li>
+      <li>Levem toalha e se sequem bem antes de entrar no elevador.</li>
+      <li>Não há salva-vidas. Crianças só com pais ou responsáveis.</li>
+    </ul>
+    <ul class="en">
+      <li>Open <b>9 am to 9 pm</b>. <b>Closed on Mondays</b> (maintenance and cleaning).</li>
+      <li class="red">Not allowed: food, glass (cups and containers), smoking, hookah and speakers.</li>
+      <li>Bring a towel and dry off well before getting into the elevator.</li>
+      <li>No lifeguard on duty. Children must be accompanied by a parent or guardian.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- RULES -->
+<section class="page c5" id="p-rules" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-rules"/></svg></span><span class="pt">Regras da casa</span><span class="en">House rules</span></h2>
+  <div class="card">
+    <ul class="pt">
+      <li>Máximo de <b>4 hóspedes, incluindo bebês e crianças</b>. Só é permitida a entrada da quantidade de hóspedes informada na reserva (Airbnb ou Booking.com). <b>Visitas não são permitidas</b>. Hóspedes extras não autorizados resultam em cancelamento imediato da reserva.</li>
+      <li>Para incluir mais um hóspede, avisem com antecedência.</li>
+      <li><b>Não levem as toalhas do apartamento para a praia.</b> Elas são apenas para banho.</li>
+      <li><b>Silêncio:</b> sem som alto antes das 8h ou depois das 22h.</li>
+      <li>Mantenham a porta do apartamento sempre fechada. O condomínio não se responsabiliza por furtos.</li>
+      <li>Churrasqueira, salão de festas, sala fitness e sauna <b>não estão disponíveis</b> para hóspedes.</li>
+      <li>Não usem bicicletas, patinetes, skates nem brinquem de bola nas garagens, hall e áreas comuns. Não obstruam corredores e escadas.</li>
+      <li>Não joguem nada para fora do apartamento e não apoiem objetos nos guarda-corpos.</li>
+      <li>O prédio tem câmeras em todas as áreas comuns.</li>
+      <li>O apartamento tem roupa de cama, toalhas e utensílios básicos de cozinha. <b>Guarda-sóis e cadeiras de praia não são fornecidos.</b></li>
+      <li>Caso algo seja quebrado durante a estadia, por favor, informem o anfitrião.</li>
+      <li>Se quebrar algo de vidro, <b>não joguem no lixo comum</b>: os funcionários que manipulam o lixo podem se machucar. Descartem vidros na <b>lixeira de vidro</b>.</li>
+      <li>Se algo no apartamento não funcionar direito, por favor, avisem o anfitrião.</li>
+      <li><b>Proibido fumar</b> dentro do apartamento.</li>
+    </ul>
+    <ul class="en">
+      <li>Maximum <b>4 guests, including babies and children</b>. Only the number of guests stated in the booking (Airbnb or Booking.com) may enter. <b>No visitors</b>. Unauthorised extra guests will lead to immediate cancellation.</li>
+      <li>To add a guest, let us know in advance.</li>
+      <li><b>Please don't take the apartment's towels to the beach.</b> They are for showering only.</li>
+      <li><b>Quiet hours:</b> no loud sound before 8 am or after 10 pm.</li>
+      <li>Always keep the apartment door closed. The building is not liable for theft.</li>
+      <li>BBQ area, party room, gym and sauna are <b>not available</b> to guests.</li>
+      <li>No bikes, scooters, skateboards or ball games in garages, lobby and common areas. Keep corridors and stairs clear.</li>
+      <li>Do not throw anything out of the apartment or place objects on railings.</li>
+      <li>The building has cameras in all common areas.</li>
+      <li>The apartment has bed linen, towels and basic kitchen utensils. <b>Beach umbrellas and chairs are not provided.</b></li>
+      <li>If anything gets broken during your stay, please let the host know.</li>
+      <li>If something made of glass breaks, <b>don't put it in the regular rubbish</b>: the staff who handle the rubbish could get hurt. Please use the <b>glass bin</b>.</li>
+      <li>If anything in the apartment isn't working properly, please let the host know.</li>
+      <li><b>No smoking</b> inside the apartment.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CHECK-OUT -->
+<section class="page c6" id="p-checkout" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-out"/></svg></span>Check-out</h2>
+  <div class="card">
+    <ul class="pt">
+      <li>Saída até as <b>10h</b>. Precisam de mais tempo? Avisem antes e vamos tentar ajudar.</li>
+      <li>Se possível, deixem roupas de cama e banho usadas em local visível.</li>
+      <li>Devolvam o crachá do estacionamento, fechem as sacadas dos quartos e os vidros da sala, e recolham o lixo produzido (as lixeiras ficam no subsolo / piso da garagem).</li>
+    </ul>
+    <ul class="en">
+      <li>Check-out by <b>10 am</b>. Need more time? Ask in advance and we will try to help.</li>
+      <li>If possible, leave used bed linen and towels in a visible spot.</li>
+      <li>Return the parking badge, close the bedroom balcony doors and the living-room windows, and take out your rubbish (the bins are in the basement / garage level).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- LOCAL -->
+<section class="page c7" id="p-local" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-eat"/></svg></span><span class="pt">Dicas locais</span><span class="en">Local tips</span></h2>
+  <p class="pt" style="color:var(--mute);margin-top:0">Recomendações pessoais do anfitrião (fev/2026).</p>
+  <p class="en" style="color:var(--mute);margin-top:0">The host's personal picks (Feb 2026).</p>
+  <div class="card">
+    <h3><span class="pt">Mercados</span><span class="en">Groceries</span></h3>
+    <div class="place"><b><span class="pt">Mercearia/Adega</span><span class="en">Corner shop / Adega</span></b><span class="m"><span class="pt">2 min a pé · compras rápidas, mini padaria</span><span class="en">2 min walk · quick buys, small bakery</span></span><br><a data-q="adega mercearia perto de Av. Presidente Castelo Branco 16140 Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+    <div class="place"><b>Mini Extra</b><span class="m"><span class="pt">10 min a pé · mercado básico, padaria</span><span class="en">10 min walk · basic supermarket, bakery</span></span><br><a data-q="Mini Extra Jardim Real Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+    <div class="place"><b>Pompeia</b><span class="m"><span class="pt">5 min de carro · mais completo, com açougue (ideal para compra semanal)</span><span class="en">5 min by car · fuller range incl. butcher (best for a weekly shop)</span></span><br><a data-q="Supermercado Pompeia Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+  </div>
+  <div class="card">
+    <h3><span class="pt">Pizza e delivery</span><span class="en">Pizza &amp; delivery</span></h3>
+    <div class="place"><b>Don Fornelo Pizzaria e Restaurante</b><span class="m"><span class="pt">3 min a pé · vale comer no local, música ao vivo nos fins de semana · Entregas (13) 99621-1918</span><span class="en">3 min walk · great to eat in, live music at weekends · Delivery (13) 99621-1918</span></span><br><a data-q="Don Fornelo Pizzaria e Restaurante Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+    <div class="place"><b>Esfiha Mar Pizzaria</b><span class="m"><span class="pt">6 min de carro · delivery ou no local · WhatsApp (13) 3477-4059</span><span class="en">6 min by car · delivery or dine-in · WhatsApp (13) 3477-4059</span></span><br><a data-q="Esfiha Mar Pizzaria Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+  </div>
+  <div class="card">
+    <h3><span class="pt">Restaurantes e bares</span><span class="en">Restaurants &amp; bars</span></h3>
+    <div class="place"><b>Cantinho da Praia</b><span class="m"><span class="pt">10 min a pé · comida caseira, porções generosas, quiosque na areia</span><span class="en">10 min walk · home-style food, generous portions, kiosk on the sand</span></span><br><a data-q="Cantinho da Praia quiosque Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+    <div class="place"><b>Florida Rui JB Samba</b><span class="m"><span class="pt">10 min a pé · bar simples com porções, samba nas noites de verão</span><span class="en">10 min walk · simple bar with snacks, samba on summer nights</span></span><br><a data-q="Florida Rui JB Samba Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+    <div class="place"><b>Casa do Tita</b><span class="m"><span class="pt">5 min de carro · de frente para o mar, música ao vivo nos fins de semana, feijoada elogiada</span><span class="en">5 min by car · beachfront, live music at weekends, praised feijoada</span></span><br><a data-q="Casa do Tita Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+    <div class="place"><b>O Barracão Frutos do Mar</b><span class="m"><span class="pt">5 min de carro · frente à praia, pratos fartos para 1, 2 ou 4 pessoas</span><span class="en">5 min by car · beachfront, hearty dishes for 1, 2 or 4 people</span></span><br><a data-q="O Barracão Frutos do Mar Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+    <div class="place"><b>Choperia Caiçara</b><span class="m"><span class="pt">7 min de carro · em frente à Praça do Caiçara, chopp gelado e música ao vivo</span><span class="en">7 min by car · facing Caiçara Square, cold draught beer, often live music</span></span><br><a data-q="Choperia Caiçara Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+  </div>
+  <div class="card">
+    <h3><span class="pt">Arenas e feiras</span><span class="en">Summer arenas &amp; fairs</span></h3>
+    <div class="place"><b>Arena Estação Verão</b><span class="m"><span class="pt">10 min a pé · exercícios e danças de dia, música ao vivo à noite</span><span class="en">10 min walk · exercise and dance classes by day, live music at night</span></span><br><a data-q="Arena Estação Verão Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+    <div class="place"><b><span class="pt">Feira de Artesanato e Food Trucks</span><span class="en">Craft Fair &amp; Food Trucks</span></b><span class="m"><span class="pt">7 min de carro · espaço arborizado, bares ao redor, música ao ar livre</span><span class="en">7 min by car · tree-lined space, bars around, outdoor music</span></span><br><a data-q="Feira de Artesanato Praça do Caiçara Praia Grande SP" target="_blank" rel="noopener"><span class="pt">Ver no mapa</span><span class="en">Map</span></a></div>
+  </div>
+  <div class="card">
+    <p class="pt" style="margin:0"><b>Mais agito?</b> Passeiem pelas praias de Ocian, Vila Tupi, Aviação, Guilhermina, Boqueirão e Canto do Forte. Quanto mais perto do Boqueirão e do Canto do Forte, mais movimentado. Os quiosques da orla valem a visita (o Cajueiro é um dos favoritos do anfitrião).</p>
+    <p class="en" style="margin:0"><b>Want more buzz?</b> Stroll the beaches of Ocian, Vila Tupi, Aviação, Guilhermina, Boqueirão and Canto do Forte. The closer to Boqueirão and Canto do Forte, the livelier. The seafront kiosks are worth a stop (Cajueiro is one of the host's favourites).</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="page c8" id="p-faq" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-faq"/></svg></span>FAQ</h2>
+  <div class="card">
+    <details><summary><span class="pt">Qual o horário de check-in e check-out?</span><span class="en">What are check-in and check-out times?</span></summary><p><span class="pt">Entrada a partir das 13h, saída até as 10h.</span><span class="en">Check-in from 1 pm, check-out by 10 am.</span></p></details>
+    <details><summary><span class="pt">Até quando devo fazer o check-in online?</span><span class="en">When must I complete the online check-in?</span></summary><p><span class="pt">Até 48 horas antes da chegada. Em cima da hora, avisem pelo WhatsApp.</span><span class="en">Up to 48 hours before arrival. Last minute? Message us on WhatsApp.</span></p></details>
+    <details><summary><span class="pt">Quando recebo a senha da porta?</span><span class="en">When do I get the door code?</span></summary><p><span class="pt">No dia do check-in, depois que o check-in online for confirmado.</span><span class="en">On check-in day, once your online check-in is confirmed.</span></p></details>
+    <details><summary><span class="pt">Por que preciso enviar documentos?</span><span class="en">Why do I need to send ID?</span></summary><p><span class="pt">O condomínio exige a lista de hóspedes e a conferência de documentos na portaria. Use só o formulário seguro.</span><span class="en">The building requires a guest list and ID check at reception. Please use the secure form only.</span></p></details>
+    <details><summary><span class="pt">Posso receber visitas?</span><span class="en">Can I have visitors?</span></summary><p><span class="pt">Não. Só os hóspedes da reserva (máx. 4).</span><span class="en">No. Only the guests on the booking (max. 4).</span></p></details>
+    <details><summary><span class="pt">Tem estacionamento?</span><span class="en">Is there parking?</span></summary><p><span class="pt">Sim, 1 vaga. Deixe o crachá visível no carro. A portaria abre o portão.</span><span class="en">Yes, 1 space. Keep the badge visible in the car. Reception opens the gate.</span></p></details>
+    <details><summary><span class="pt">Tem cadeiras e guarda-sol?</span><span class="en">Are beach chairs and umbrellas provided?</span></summary><p><span class="pt">Não. Se trouxerem os seus, guardem no armário do térreo.</span><span class="en">No. If you bring your own, store them in the ground-floor locker.</span></p></details>
+    <details><summary><span class="pt">Posso usar a churrasqueira?</span><span class="en">Can I use the BBQ?</span></summary><p><span class="pt">Não, ela não está disponível para hóspedes.</span><span class="en">No, it is not available to guests.</span></p></details>
+    <details><summary><span class="pt">A piscina está aberta?</span><span class="en">Is the pool open?</span></summary><p><span class="pt">Das 9h às 21h, exceto às segundas.</span><span class="en">9 am to 9 pm, except Mondays.</span></p></details>
+    <details><summary><span class="pt">Posso sair mais tarde?</span><span class="en">Can I check out later?</span></summary><p><span class="pt">Avisem com antecedência; se possível, atendemos.</span><span class="en">Ask in advance; we will accommodate if possible.</span></p></details>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="page c4" id="p-contact" hidden>
+  <h2 class="ptitle"><span class="box"><svg class="ic"><use href="#i-chat"/></svg></span><span class="pt">Contato e emergências</span><span class="en">Contact &amp; emergencies</span></h2>
+  <div class="card">
+    <h3><span class="pt">Anfitrião</span><span class="en">Host</span></h3>
+    <p class="pt">Dúvidas ou problemas durante a estadia? Falem comigo pelo WhatsApp.</p>
+    <p class="en">Questions or issues during your stay? Message me on WhatsApp.</p>
+    <p style="font-size:19px;font-weight:700;margin:6px 0 2px">+55 13 98109-7041</p>
+    <a class="btn" id="wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <div class="card emerg">
+    <h3><span class="pt">Emergências</span><span class="en">Emergencies</span></h3>
+    <p class="pt"><b>Portaria 24h:</b> falem com a portaria para qualquer ocorrência no prédio.</p>
+    <p class="en"><b>24h reception:</b> contact reception for anything inside the building.</p>
+    <p class="pt"><b>Emergências no Brasil:</b> 190 (Polícia) · 192 (SAMU) · 193 (Bombeiros).</p>
+    <p class="en"><b>Emergencies in Brazil:</b> 190 (Police) · 192 (Ambulance) · 193 (Fire).</p>
+  </div>
+</section>
+
+</div>
+
+<div id="install"><button type="button" aria-label="Close">×</button>
+  <span class="pt">Adicione à tela inicial. <b>iPhone:</b> Compartilhar → Adicionar à Tela de Início. <b>Android:</b> menu ⋮ → Adicionar à tela inicial.</span>
+  <span class="en">Add to Home Screen. <b>iPhone:</b> Share → Add to Home Screen. <b>Android:</b> ⋮ menu → Add to Home screen.</span></div>
+<div id="toast"></div>
+
+<script>
+// ---- EDIT THESE ----
+var CONFIG={
+  phone:"5513981097041",            // host WhatsApp, digits only, with country code
+  tally:"https://tally.so/r/xVxgBG", // Tally check-in form
+  slideMs:3000                     // time each cover photo stays on screen (ms)
+};
+// --------------------
+(function(){
+  var d=document.documentElement,L="pt";
+  // PT por padrão; só muda se o hóspede tocar em EN (escolha guardada neste aparelho)
+  try{L=localStorage.getItem("langChoice")||"pt"}catch(e){}
+  function set(l,save){d.dataset.lang=l;d.lang=l==="pt"?"pt-BR":"en";if(save){try{localStorage.setItem("langChoice",l)}catch(e){}}}
+  set(L);
+  document.querySelectorAll(".bpt").forEach(function(b){b.onclick=function(){set("pt",1)}});
+  document.querySelectorAll(".ben").forEach(function(b){b.onclick=function(){set("en",1)}});
+
+  document.querySelectorAll("a[data-q]").forEach(function(a){
+    a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(a.dataset.q)});
+  document.querySelectorAll(".btn.tally").forEach(function(a){a.href=CONFIG.tally});
+  document.getElementById("wa").href="https://wa.me/"+CONFIG.phone;
+
+  // carousel: auto-slides left in a seamless loop (first slide is cloned at the end)
+  var sl=document.querySelector(".slides"),dt=document.querySelector(".dots");
+  if(sl&&dt&&sl.children.length>1){
+    var n=sl.children.length,clone=sl.children[0].cloneNode(true);
+    clone.setAttribute("aria-hidden","true");sl.appendChild(clone);
+    for(var k=0;k<n;k++)dt.appendChild(document.createElement("i"));
+    var hold=false,hTimer,sTimer;
+    function idx(){return sl.clientWidth?Math.round(sl.scrollLeft/sl.clientWidth):0}
+    function mark(){var c=idx()%n;for(var j=0;j<n;j++)dt.children[j].className=j===c?"on":""}
+    sl.addEventListener("scroll",function(){
+      mark();clearTimeout(sTimer);
+      sTimer=setTimeout(function(){if(idx()>=n){sl.style.scrollSnapType="none";sl.scrollLeft=0;sl.style.scrollSnapType=""}},150);
+    });
+    mark();
+    sl.addEventListener("touchstart",function(){hold=true;clearTimeout(hTimer)});
+    sl.addEventListener("touchend",function(){hTimer=setTimeout(function(){hold=false},6000)});
+    if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+      setInterval(function(){
+        if(hold||document.hidden||!sl.clientWidth)return;
+        sl.scrollTo({left:(idx()+1)*sl.clientWidth,behavior:"smooth"});
+      },CONFIG.slideMs);
+    }
+  }
+
+  // page-by-page navigation (hash routing: back button and deep links work)
+  var home=document.getElementById("home"),bar=document.getElementById("bar"),
+      pages=document.querySelectorAll(".page"),inApp=false;
+  function route(){
+    var h=(location.hash||"").replace("#",""),p=document.getElementById("p-"+h);
+    for(var i=0;i<pages.length;i++)pages[i].hidden=true;
+    if(p){p.hidden=false;home.hidden=true;bar.hidden=false}
+    else{home.hidden=false;bar.hidden=true;inApp=false}
+    window.scrollTo(0,0);
+  }
+  window.addEventListener("hashchange",function(){
+    if(document.getElementById("p-"+(location.hash||"").replace("#","")))inApp=true;
+    route();
+  });
+  document.getElementById("back").onclick=function(e){
+    e.preventDefault();
+    if(inApp&&history.length>1){history.back()}else{location.hash=""}
+  };
+  route();
+
+  var t=document.getElementById("toast"),tm;
+  function toast(m){t.textContent=m;t.className="on";clearTimeout(tm);tm=setTimeout(function(){t.className=""},1600)}
+  document.querySelectorAll(".copy").forEach(function(b){b.onclick=function(){
+    var v=b.dataset.copy,ok=d.dataset.lang==="pt"?"Copiado ✓":"Copied ✓";
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(function(){toast(ok)},fb)}else fb();
+    function fb(){var i=document.createElement("input");i.value=v;document.body.appendChild(i);i.select();try{document.execCommand("copy");toast(ok)}catch(e){}i.remove()}
+  }});
+
+  // install hint (iOS only; Android/Chrome shows its own prompt)
+  var ios=/iphone|ipad|ipod/i.test(navigator.userAgent),
+      standalone=window.navigator.standalone||matchMedia("(display-mode: standalone)").matches,
+      dismissed=false;try{dismissed=localStorage.getItem("hint")==="1"}catch(e){}
+  var box=document.getElementById("install");
+  if(ios&&!standalone&&!dismissed){box.style.display="block";
+    box.querySelector("button").onclick=function(){box.style.display="none";try{localStorage.setItem("hint","1")}catch(e){}}}
+})();
+</script>
+<div id="lb" hidden><button class="lbx" id="lbx" type="button" aria-label="Fechar / Close">×</button><img id="lbi" alt=""><div class="lbh"><span class="pt">Pinça para ampliar · toque duplo</span><span class="en">Pinch to zoom · double-tap</span></div></div>
+<script>
+(function(){
+  var lb=document.getElementById("lb"),im=document.getElementById("lbi"),
+      S=1,X=0,Y=0,fit=1,nw=0,nh=0,vw=0,vh=0,P={},d0=1,s0=1,last=0,isOpen=false;
+  function lim(){var w=nw*fit*S,h=nh*fit*S;
+    X=w<=vw?(vw-w)/2:Math.min(0,Math.max(vw-w,X));
+    Y=h<=vh?(vh-h)/2:Math.min(0,Math.max(vh-h,Y))}
+  function ap(){lim();im.style.transform="translate("+X+"px,"+Y+"px) scale("+(fit*S)+")"}
+  function zoomAt(ns,cx,cy){ns=Math.max(1,Math.min(6,ns));var k=ns/S;X=cx-(cx-X)*k;Y=cy-(cy-Y)*k;S=ns;ap()}
+  function dist(){var k=Object.keys(P);return Math.hypot(P[k[0]].x-P[k[1]].x,P[k[0]].y-P[k[1]].y)||1}
+  window.openLightbox=function(src,alt){
+    vw=innerWidth;vh=innerHeight;
+    im.onload=function(){nw=im.naturalWidth;nh=im.naturalHeight;fit=Math.min(vw/nw,vh/nh);S=1;X=0;Y=0;ap()};
+    im.alt=alt||"";im.src=src;lb.hidden=false;isOpen=true;
+    try{history.pushState({lb:1},"")}catch(e){}
+  };
+  function close(){lb.hidden=true;isOpen=false;P={};im.removeAttribute("src")}
+  document.getElementById("lbx").onclick=function(){if(history.state&&history.state.lb)history.back();else close()};
+  window.addEventListener("popstate",function(){if(isOpen)close()});
+  window.addEventListener("keydown",function(e){if(e.key==="Escape"&&isOpen)document.getElementById("lbx").click()});
+  window.addEventListener("resize",function(){if(isOpen){vw=innerWidth;vh=innerHeight;fit=Math.min(vw/nw,vh/nh);ap()}});
+  lb.addEventListener("pointerdown",function(e){
+    if(e.target.id==="lbx")return;
+    try{lb.setPointerCapture(e.pointerId)}catch(_){}
+    P[e.pointerId]={x:e.clientX,y:e.clientY};
+    var n=Object.keys(P).length;
+    if(n===2){d0=dist();s0=S}
+    if(n===1){var t=Date.now();if(t-last<300){zoomAt(S>1.01?1:2.5,e.clientX,e.clientY);last=0}else last=t}
+  });
+  lb.addEventListener("pointermove",function(e){
+    var p=P[e.pointerId];if(!p)return;var k=Object.keys(P);
+    if(k.length===1){X+=e.clientX-p.x;Y+=e.clientY-p.y;p.x=e.clientX;p.y=e.clientY;ap()}
+    else if(k.length===2){p.x=e.clientX;p.y=e.clientY;var a=P[k[0]],b=P[k[1]];zoomAt(s0*dist()/d0,(a.x+b.x)/2,(a.y+b.y)/2)}
+  });
+  function up(e){delete P[e.pointerId]}
+  lb.addEventListener("pointerup",up);lb.addEventListener("pointercancel",up);
+  lb.addEventListener("wheel",function(e){e.preventDefault();zoomAt(S*(e.deltaY<0?1.2:1/1.2),e.clientX,e.clientY)},{passive:false});
+})();
+</script>
+<script>
+(function(){
+  // Colagens de fotos reais em img/Real/ (webp, 1200 px de largura). Se um arquivo não existir, o cartão some sozinho.
+  var C=[["colagem-predio",1672,941,"O prédio e a piscina","The building &amp; pool"],
+         ["colagem-sala",1536,1024,"Sala, hall e cozinha","Living room, hall &amp; kitchen"],
+         ["colagem-quarto",1536,1024,"Quartos e banheiro","Bedrooms &amp; bathroom"],
+         ["colagem-vistas",1920,1200,"Vistas e praia","Views &amp; beach"]];
+  var done=false,box=document.getElementById("tg");
+  function check(){
+    var any=box.children.length>0;
+    document.querySelector("#p-tour .tempty").hidden=any;
+    document.querySelector("#p-tour .treal").hidden=!any;
+  }
+  function init(){
+    if(done)return;done=true;
+    C.forEach(function(x){
+      var d=document.createElement("div"),a=document.createElement("a"),im=new Image();
+      d.className="card tcol";
+      d.innerHTML='<h3><span class="pt">'+x[3]+'</span><span class="en">'+x[4]+'</span></h3>';
+      a.href="img/Real/"+x[0]+".webp";a.target="_blank";a.rel="noopener";
+      a.onclick=function(e){if(window.openLightbox){e.preventDefault();openLightbox(a.href,im.alt)}};
+      im.src=a.href;im.width=x[1];im.height=x[2];im.loading="lazy";im.decoding="async";
+      im.alt=x[3]+" / "+x[4].replace("&amp;","&");
+      im.onerror=function(){d.remove();check()};
+      a.appendChild(im);d.appendChild(a);box.appendChild(d);
+    });
+    setTimeout(check,2500);
+  }
+  function r(){if((location.hash||"")==="#tour")init()}
+  window.addEventListener("hashchange",r);r();
+})();
+</script>
+</body>
+</html>
